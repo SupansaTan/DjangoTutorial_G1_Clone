@@ -38,6 +38,9 @@ class ResultsView(generic.DetailView):
 reverseVotes = True;
 reverseVoteTime = True;
 
+def home(request):
+    return render(request, 'polls/home.html')
+
 def index(request):
     button = request.GET.get('sort', False) 
     
